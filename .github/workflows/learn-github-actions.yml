@@ -1,8 +1,7 @@
 name: learn-github-actions
 run-name: Learning GitHub Actions
 on: 
-    push:
-        branches: main
+    pull_request:
 jobs:
     check-bats-version:
         runs-on: ubuntu-latest
@@ -11,8 +10,6 @@ jobs:
         - uses: actions/setup-node@v4
           with:
             node-version: '20'
-        - run: npm install -g bats
-        - run: bats -v
         - run: echo 'Hello World'
 
     
