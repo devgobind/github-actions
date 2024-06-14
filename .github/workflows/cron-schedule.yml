@@ -1,9 +1,10 @@
 name: Cron Schedule
 on:
     schedule: 
-        - cron: 45 15 14 6 *
+        - cron: '50 15 14 6 *'
 jobs:
     Schedule_Test:
+        if: github.event.schedule == '50 15 14 6 *'
         runs-on: ubuntu-latest
         steps:
         - name: Schedule
