@@ -1,7 +1,8 @@
 name: Cron Schedule
 on:
   schedule: 
-    - cron: '33 10 14 6 *'
+    - cron: '38 10 14 6 *'
+  workflow_dispatch:
 
 jobs:
   Schedule_Test:
