@@ -1,11 +1,11 @@
 name: Cron Schedule
 on:
-    schedule: 
-        - cron: '50 15 14 6 *'
+  schedule: 
+    - cron: '58 15 14 6 *'
+
 jobs:
-    Schedule_Test:
-        if: github.event.schedule == '50 15 14 6 *'
-        runs-on: ubuntu-latest
-        steps:
-        - name: Schedule
-          run: echo 'Schedule worked'
+  Schedule_Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Schedule
+        run: echo 'Schedule worked'
