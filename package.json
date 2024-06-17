@@ -1,0 +1,27 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "Different Github Actions",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgobind/github-actions.git"
+  },
+  "keywords": [
+    "Github",
+    "Actions"
+  ],
+  "author": "Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devgobind/github-actions/issues"
+  },
+  "homepage": "https://github.com/devgobind/github-actions#readme",
+  "dependencies": {
+    "mongodb": "^6.7.0"
+  }
+}
