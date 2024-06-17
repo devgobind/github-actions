@@ -17,7 +17,7 @@ async function connectToCluster(uri) {
         console.log(
         `A document was inserted with the _id: ${result.insertedId}`,
         );
-        return mongoClient;
+        mongoClient.close();
     } catch (error) {
         console.error('Connection to MongoDB Atlas failed!', error);
         process.exit();
