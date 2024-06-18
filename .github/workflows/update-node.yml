@@ -14,4 +14,4 @@ jobs:
             - name: Show Message
               env:
                 MESSAGE: ${{inputs.environment}} 
-              run: node file.js
+              run: node ./file.js
