@@ -1,17 +1,30 @@
 name: Update Node File
 
 on:
-    workflow_dispatch:
-        inputs:
-            environment:
-                description: 'Add Message'
-                default: 'Kolkata'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Add Message"
+        default: "Kolkata"
 
 jobs:
-    update_node:
-        runs-on: ubuntu-latest
-        steps: 
-            - name: Show Message
-              env:
-                MESSAGE: ${{inputs.environment}} 
-              run: node ./file.js
+  update_node:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+
+        - name: Set up Node.js
+          uses: actions/setup-node@v3
+
+        - name: Show Message
+          env:
+            MESSAGE: ${{inputs.environment}}
+          run: node file.js
+        
+
+
+
+
+
+        
