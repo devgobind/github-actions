@@ -1,0 +1,15 @@
+name: Update Node File
+
+on:
+    workflow_dispatch:
+        inputs:
+            environment:
+                description: 'Add Message'
+                default: 'Kolkata'
+
+jobs:
+    update_node:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Show Message
+              run: echo `${{github.events.inputs.environment}}`
