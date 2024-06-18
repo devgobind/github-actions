@@ -12,4 +12,6 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - name: Show Message
-              run: echo `${{inputs.environment}}`
+              env:
+                MESSAGE: ${{inputs.environment}} 
+              run: node file.js
