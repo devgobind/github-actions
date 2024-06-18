@@ -1,9 +1,6 @@
 name: Run MongoDB Script
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
